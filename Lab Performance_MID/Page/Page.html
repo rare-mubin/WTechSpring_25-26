@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management Page</title>
+    <link rel="stylesheet" href="../Design/Style.css">
+</head>
+
+<body>
+    <div class="container">
+        <fieldset class="ProductForm" action="">
+            <legend><h2>Product Management</h2></legend>
+            <label for="UnitPrice">Unit Price</label>
+            <input class="TextField" type="number" id="UnitPrice" name="UnitPrice" value="1000"><br>
+            <label for="QuantityPerDay">Quantity Per Day</label>
+            <input class="TextField" type="number" id="QuantityPerDay" placeholder="Enter quantity per day" name="QuantityPerDay"><br>
+            <label for="TotalPriceFor30Days">Total Price for 30 Days</label>
+            <input class="TextField" type="number" id="TotalPriceFor30Days" name="TotalPriceFor30Days" readonly><br>
+        </fieldset>
+    </div>
+    <script src="../JavaScript/Validation.js"></script>
+</body>
