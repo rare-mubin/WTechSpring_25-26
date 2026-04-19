@@ -17,6 +17,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     $email = $_REQUEST["email"];
     $website = $_REQUEST["website"];
     $comment = $_REQUEST["comment"];
+    $gender = $_REQUEST["gender"];
 
 
     //name validation
@@ -45,9 +46,35 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         echo "Email: ".$email ."</br>";
     }
 
+
+    //website validation
+    if (empty($website)) {
+        $website = "";
+    } 
+    elseif(!preg_match("/\b(?:(?:https?|ftp):\/\/|www\.)[-a-z0-9+&@#\/%?=~_|!:,.;]*[-a-z0-9+&@#\/%=~_|]/i",$website)) {
+        $websiteErr = "Invalid URL";
+    }
+    elseif(!empty($website)){
+        echo "Website: ".$website ."</br>";
+    }
+
+
+    //gender validation
+    if (isset($gender) && $gender=="female"){
+        echo "Gender: ".$gender ."</br>";
+    }
+    elseif (isset($gender) && $gender=="male"){
+        echo "Gender: ".$gender ."</br>";
+    }
+    else{
+        echo "Please select a gender </br>";
+    }
+    
+
     //echo comment
     if(!empty($comment)){
         echo "Comment: ".$comment ."</br>";
     }
+
 
 }
