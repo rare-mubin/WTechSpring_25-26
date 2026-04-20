@@ -9,7 +9,7 @@ include "../Controller/validation.php";
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <form class="form" method ="post" action="">
+        <form class="form" method ="post" action="viewdata.php">
             <h2>Registration Form</h2>
             <table>
                 <tr>
