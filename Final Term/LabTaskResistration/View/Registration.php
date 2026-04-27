@@ -9,7 +9,7 @@ include "../Controller/validation.php";
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-        <form class="form" method ="post" action="viewdata.php">
+        <form class="form" method ="post" action="wellcome.php" enctype="multipart/form-data">
             <h2>Registration Form</h2>
             <table>
                 <tr>
@@ -24,6 +24,11 @@ include "../Controller/validation.php";
                 <tr>
                     <td>Email:</td>
                     <td><input class="input-field" type="email" name="email"></td>
+                    <td><p style="color: red;">*</p></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><input class="input-field" type="password" name="password"></td>
                     <td><p style="color: red;">*</p></td>
                 </tr>
 
