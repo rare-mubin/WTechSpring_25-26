@@ -1,22 +1,18 @@
-<?php
-include "../Controller/LoginValidate.php";
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
     <title> Log In Form</title> 
 </head>
 <body style="background-color: #000000; color: white;">
-    <form method="post" action="" style="width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;">
+    <form onsubmit="event.preventDefault(); LogIn();" style="width: 100%; height: 100vh; display: flex; align-items: center; justify-content: center;">
         <table>
             <tr>
                 <td>Email:</td>
-                <td><input type="email" name="email"></td>
+                <td><input type="email" id="email" name="email"></td>
             </tr>
             <tr>
                 <td>Password:</td>
-                <td><input type="password" name="password"></td>
+                <td><input type="password" id="password" name="password"></td>
             </tr>
             <tr>
                 <td><input type="submit" value="Log In"></td>
@@ -24,5 +20,6 @@ include "../Controller/LoginValidate.php";
             </tr>
         </table>
     </form>
+    <script src="../Controller/js/ajax.js"></script>
 </body>
 </html>
